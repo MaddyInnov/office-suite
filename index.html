@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Office Suite — the office that finishes the work</title>
+<meta name="description" content="Office Suite is an AI-first office suite with 16 apps — Docs, Sheets, Slides, Mail, CRM and more — that runs on your own instance. One prompt finishes whole workflows. No per-seat rent, no data leaving your machine.">
+<link rel="icon" href="assets/logo.png">
+<style>
+  :root { --blue:#2b50c8; --navy:#16296b; --light:#6d9bff; --tint:#eef3ff; --ink:#1c2333; --grey:#5b6577; --line:#dde5f5; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif; color:var(--ink); background:#fff; line-height:1.55; }
+  a { color:var(--blue); }
+  .wrap { max-width:1060px; margin:0 auto; padding:0 22px; }
+  header { position:sticky; top:0; background:rgba(255,255,255,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); z-index:10; }
+  header .wrap { display:flex; align-items:center; gap:12px; padding-top:12px; padding-bottom:12px; }
+  header img { width:34px; height:34px; border-radius:9px; }
+  header .brand { font-weight:800; font-size:19px; color:var(--navy); }
+  header nav { margin-left:auto; display:flex; gap:20px; font-size:14.5px; }
+  header nav a { color:var(--ink); text-decoration:none; font-weight:600; }
+  .btn { display:inline-block; background:var(--blue); color:#fff; text-decoration:none; font-weight:700;
+         padding:12px 22px; border-radius:10px; font-size:15.5px; box-shadow:0 6px 18px rgba(43,80,200,.25); }
+  .btn:hover { background:#2343ab; }
+  .btn.ghost { background:#fff; color:var(--blue); border:1.5px solid var(--light); box-shadow:none; }
+  .hero { background:linear-gradient(180deg, var(--tint), #fff); padding:64px 0 30px; text-align:center; }
+  .hero img.logo { width:104px; height:104px; border-radius:26px; box-shadow:0 14px 34px rgba(22,41,107,.25); }
+  .hero h1 { font-size:44px; line-height:1.12; color:var(--navy); margin:22px auto 12px; max-width:720px; }
+  .hero p.lede { font-size:18.5px; color:var(--grey); max-width:660px; margin:0 auto 26px; }
+  .hero .cta { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .hero .note { font-size:13.5px; color:var(--grey); margin-top:12px; }
+  .hero img.shot { width:100%; max-width:940px; border-radius:14px; border:1px solid var(--line);
+                   box-shadow:0 24px 60px rgba(22,41,107,.18); margin-top:38px; }
+  section { padding:52px 0 8px; }
+  h2 { font-size:29px; color:var(--navy); text-align:center; margin-bottom:8px; }
+  .sub { text-align:center; color:var(--grey); max-width:640px; margin:0 auto 30px; }
+  .apps { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:12px; }
+  .app { background:var(--tint); border:1px solid var(--line); border-radius:12px; padding:14px 12px; text-align:center; }
+  .app .ic { font-size:24px; }
+  .app .nm { font-weight:700; font-size:14.5px; margin-top:5px; }
+  .app .ds { font-size:12.5px; color:var(--grey); }
+  .grid3 { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; }
+  .card { border:1px solid var(--line); border-radius:14px; padding:20px; background:#fff; }
+  .card h3 { color:var(--navy); font-size:17px; margin-bottom:7px; }
+  .card p { color:var(--grey); font-size:14.5px; }
+  .shots { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:16px; }
+  .shots figure { border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }
+  .shots img { width:100%; display:block; }
+  .shots figcaption { padding:10px 14px; font-size:13.5px; color:var(--grey); }
+  .dl { background:var(--navy); color:#fff; border-radius:18px; padding:38px 30px; text-align:center; margin:52px 0; }
+  .dl h2 { color:#fff; }
+  .dl p { color:#c7d4f8; max-width:560px; margin:0 auto 22px; }
+  .dl .btn { background:#fff; color:var(--navy); box-shadow:none; }
+  .dl .note { font-size:13px; color:#93a7e8; margin-top:14px; }
+  footer { border-top:1px solid var(--line); padding:26px 0 40px; color:var(--grey); font-size:13.5px; text-align:center; }
+  @media (max-width:640px) { .hero h1 { font-size:32px; } header nav { display:none; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img src="assets/logo.png" alt="Office Suite logo">
+    <span class="brand">Office Suite</span>
+    <nav>
+      <a href="#apps">Apps</a><a href="#why">Why</a><a href="#screens">Screenshots</a><a href="#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <img class="logo" src="assets/logo.png" alt="Office Suite">
+    <h1>The office that finishes the work.</h1>
+    <p class="lede">16 apps — documents, spreadsheets, slides, mail, CRM, meetings and more — in one suite that
+      runs on <b>your own instance</b>. Describe a workflow in one sentence and the Agent builds the files,
+      updates the CRM, assigns the tasks and drafts the announcement.</p>
+    <div class="cta">
+      <a class="btn" href="#download">⬇ Download for Windows</a>
+      <a class="btn ghost" href="#why">Why it's different</a>
+    </div>
+    <p class="note">Version 7.6.0 · Free to run on your own machine · Your data never leaves your instance</p>
+    <img class="shot" src="assets/shot-home.png" alt="Office Suite home screen">
+  </div>
+</div>
+
+<section id="apps">
+  <div class="wrap">
+    <h2>One suite, sixteen apps</h2>
+    <p class="sub">Everything a small business, school or practice actually uses — one login, one home screen, no app-hopping.</p>
+    <div class="apps">
+      <div class="app"><div class="ic">📄</div><div class="nm">Docs</div><div class="ds">Word-compatible documents</div></div>
+      <div class="app"><div class="ic">📊</div><div class="nm">Sheets</div><div class="ds">Live-formula workbooks</div></div>
+      <div class="app"><div class="ic">🖥️</div><div class="nm">Slides</div><div class="ds">Designed decks</div></div>
+      <div class="app"><div class="ic">📕</div><div class="nm">PDF Studio</div><div class="ds">Read, merge, convert</div></div>
+      <div class="app"><div class="ic">🗂️</div><div class="nm">Drive</div><div class="ds">Files with version history</div></div>
+      <div class="app"><div class="ic">🗒️</div><div class="nm">Notes</div><div class="ds">Linked notebooks</div></div>
+      <div class="app"><div class="ic">🎨</div><div class="nm">Board</div><div class="ds">Whiteboard &amp; mind maps</div></div>
+      <div class="app"><div class="ic">📝</div><div class="nm">Forms</div><div class="ds">Public forms → sheets</div></div>
+      <div class="app"><div class="ic">📅</div><div class="nm">Calendar</div><div class="ds">Events &amp; ICS export</div></div>
+      <div class="app"><div class="ic">✅</div><div class="nm">Tasks</div><div class="ds">Boards &amp; reminders</div></div>
+      <div class="app"><div class="ic">🗄️</div><div class="nm">Base</div><div class="ds">Your own little database</div></div>
+      <div class="app"><div class="ic">🎥</div><div class="nm">Meet</div><div class="ds">Meetings &amp; minutes</div></div>
+      <div class="app"><div class="ic">✉️</div><div class="nm">Mail</div><div class="ds">A real mailbox</div></div>
+      <div class="app"><div class="ic">💬</div><div class="nm">Chat</div><div class="ds">Team channels</div></div>
+      <div class="app"><div class="ic">⚡</div><div class="nm">Automate</div><div class="ds">Scheduled workflows</div></div>
+      <div class="app"><div class="ic">🎯</div><div class="nm">CRM</div><div class="ds">Pipeline with AI scoring</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <h2>Why it's different</h2>
+    <p class="sub">Not another rent-per-seat clone. Four structural advantages the big suites can't copy without changing what they are.</p>
+    <div class="grid3">
+      <div class="card"><h3>✦ One prompt, whole workflow</h3>
+        <p>"Prepare my monthly business review pack" builds the sales workbook, the review deck, the summary
+           report, a CRM lead, the follow-up tasks and the announcement draft — finished work, not autocomplete.</p></div>
+      <div class="card"><h3>🏠 Your instance, your data</h3>
+        <p>Office Suite runs on hardware you control. Documents are never on our servers because there is no
+           "our servers" in the loop. It works offline and air-gapped.</p></div>
+      <div class="card"><h3>⚙️ Works with no AI at all</h3>
+        <p>Deterministic engines generate and recalculate real Office files with zero marginal cost. Plug in
+           your own AI key if you want polish — never required, never pooled.</p></div>
+      <div class="card"><h3>📗 Editing loses nothing</h3>
+        <p>Open a workbook that has charts, images, conditional formatting, validation and comments — edit it —
+           save it — everything is still there. Measured on a fidelity corpus: 27/27, zero known loss.</p></div>
+      <div class="card"><h3>📝 Real collaboration</h3>
+        <p>Docs track changes with accept/reject review, live sync with presence, and Sheets saves that merge
+           instead of overwriting a colleague's work.</p></div>
+      <div class="card"><h3>🇮🇳 Built for Bharat's businesses</h3>
+        <p>Coaching institutes, clinics, traders and schools: ready-made packs for admissions, fee registers,
+           stock and results — priced for India, not converted from dollars.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="screens">
+  <div class="wrap">
+    <h2>Screenshots</h2>
+    <p class="sub">Real screens from the current release.</p>
+    <div class="shots">
+      <figure><img src="assets/shot-sheets.png" alt="Sheets editor"><figcaption>The Sheets editor — a generated sales dashboard, fully styled, formulas live.</figcaption></figure>
+      <figure><img src="assets/shot-crm.png" alt="CRM pipeline"><figcaption>CRM pipeline with transparent, explainable AI lead scores.</figcaption></figure>
+      <figure><img src="assets/shot-base.png" alt="Base kanban board"><figcaption>Base — your tables also become a kanban board.</figcaption></figure>
+      <figure><img src="assets/shot-board.png" alt="Board mind map"><figcaption>Board — whiteboard, shapes and prompt-generated mind maps.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="dl" id="download">
+    <h2>Get Office Suite</h2>
+    <p>Download the Windows app, or run the suite on your own server with one command.
+       No account, no subscription, no per-seat rent — it's your instance.</p>
+    <a class="btn" id="winDownload" href="https://github.com/MaddyInnov/office-suite/releases">⬇ Download for Windows (v7.6.0)</a>
+    <p class="note">The installer is currently unsigned, so Windows may show an "unknown publisher" prompt —
+       choose <i>More info → Run anyway</i>. A signed build follows once code-signing validation completes.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Copyright © 2026 Ashutosh Sahoo · Part of <b>KriyaDot</b> · Office Suite is a front door to your own instance — this page holds no user data.
+  </div>
+</footer>
+</body>
+</html>
